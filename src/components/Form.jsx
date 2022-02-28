@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 
 class Form extends Component {
   render() {
-    const { cardName,
+    const {
+      cardName,
       cardDescription,
       cardAttr1,
       cardAttr2,
@@ -12,8 +13,8 @@ class Form extends Component {
       cardRare,
       cardTrunfo,
       // hasTrunfo,
-      isSaveButtonDisabled,
       onInputChange,
+      isSaveButtonDisabled,
       onSaveButtonClick,
     } = this.props;
 
@@ -148,9 +149,9 @@ Form.propTypes = {
   cardRare: PropTypes.string.isRequired,
   cardTrunfo: PropTypes.bool.isRequired,
   // hasTrunfo: PropTypes.bool.isRequired,
-  isSaveButtonDisabled: PropTypes.bool.isRequired,
-  onInputChange: PropTypes.string.isRequired,
-  onSaveButtonClick: PropTypes.string.isRequired,
+  onInputChange: PropTypes.bool.isRequired,
+  isSaveButtonDisabled: PropTypes.func.isRequired,
+  onSaveButtonClick: PropTypes.func.isRequired,
 };
 
 export default Form;
