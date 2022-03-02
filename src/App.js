@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from './components/Form';
 import Card from './components/Card';
+import Cards from './components/Cards';
 
 const maxNumber = 90;
 const maxSum = 210;
@@ -15,7 +16,7 @@ class App extends React.Component {
       cardAttr2: 0,
       cardAttr3: 0,
       cardImage: '',
-      cardRare: '',
+      cardRare: 'normal',
       cardTrunfo: false,
       hasTrunfo: false,
       isSaveButtonDisabled: true,
@@ -103,6 +104,7 @@ class App extends React.Component {
       hasTrunfo,
       isSaveButtonDisabled,
       // onSaveButtonClick,
+      cards,
     } = this.state;
 
     return (
@@ -132,6 +134,7 @@ class App extends React.Component {
           cardRare={ cardRare }
           cardTrunfo={ cardTrunfo }
         />
+        <Cards cards={ cards } />
       </div>
     );
   }
