@@ -38,6 +38,11 @@ class App extends React.Component {
       });
   };
 
+  checkTrunfo = () => {
+    const { cardTrunfo } = this.state;
+    if (cardTrunfo === true) this.setState({ hasTrunfo: true });
+  }
+
   savingCards = () => {
     const { cardName, cardDescription, cardAttr1, cardAttr2, cardAttr3,
       cardImage, cardRare, cardTrunfo } = this.state;
@@ -51,6 +56,7 @@ class App extends React.Component {
       cardRare,
       cardTrunfo,
     };
+    this.checkTrunfo();
     this.setState((prevState) => ({ cards: [...prevState.cards, newCard],
       cardName: '',
       cardDescription: '',
